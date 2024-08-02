@@ -28,7 +28,7 @@ public class StudentController {
         return this.studentService.getAllStudent();
     }
 
-    @RequestMapping(value = "/addStudent", method = RequestMethod.POST)
+    @RequestMapping(value = "/addStudent", method = RequestMethod.GET)
     public int saveStudent(String sno,String name,String sex) {
         Student student = new Student();
         student.setSno(sno);
@@ -37,7 +37,7 @@ public class StudentController {
         return this.studentService.addStudent(student);
     }
 
-    @RequestMapping(value = "/deleteStudent", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteStudent", method = RequestMethod.GET)
     public int deleteStudentBySno(String sno) {
         return this.studentService.deleteStudent(sno);
     }
